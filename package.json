@@ -1,6 +1,28 @@
 {
   "name": "@byloth/vue-content",
   "version": "1.0.0",
+  "description": "A fork of @nuxt/content to backporting its functionality to standard Vue apps.",
+  "keywords": [
+    "VueJs",
+    "Content",
+    "TypeScript",
+    "Library",
+    "Web"
+  ],
+  "homepage": "https://github.com/Byloth/vue-content#readme",
+  "bugs": {
+    "url": "https://github.com/Byloth/vue-content/issues"
+  },
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Matteo Bilotta",
+    "email": "me@byloth.net",
+    "url": "https://www.byloth.net/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Byloth/vue-content.git"
+  },
   "main": "./dist/vue-content.umd.js",
   "module": "./dist/vue-content.es.js",
   "types": "./src/index.ts",
