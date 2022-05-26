@@ -28,9 +28,18 @@ export class VueContent
     public async fetch(...path: string[]): Promise<ParsedContent>
     {
         const filename = path.join("/");
-        const filepath = `../content/${filename}.md`;
-        const mdFile = await import(/* @vite-ignore */ filepath);
-        const content = mdFile.default;
+        const filepath = `/content/${filename}.md`;
+        const mdFile = await fetch(filepath).then((response) =>
+        {
+            if (response.ok)
+            {
+                return response.text();
+            }
+
+            throw new Error(`Could not fetch "${filepath}" content file.`);
+        });
+
+        const content = mdFile;
 
         return markdown.parse(slugify(filename), content, this._options.markdown);
     }

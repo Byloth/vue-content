@@ -1,7 +1,5 @@
 // @ts-nocheck
 
-import type { Theme } from 'shiki-es'
-
 export interface ParsedContentMeta {
   /**
    * Content id
@@ -245,16 +243,4 @@ export interface NavItem {
   children?: NavItem[]
 
   [key: string]: any
-}
-
-// Highlight
-export interface HighlightParams {
-  code: string
-  lang: string
-  theme: Theme
-}
-
-export interface HighlightThemedToken {
-  content: string
-  color?: string
 }

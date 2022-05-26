@@ -1,9 +1,9 @@
 {
   "name": "@byloth/vue-content",
   "version": "1.0.0",
-  "files": ["dist"],
   "main": "./dist/vue-content.umd.js",
   "module": "./dist/vue-content.es.js",
+  "types": "./src/index.ts",
   "exports": {
     ".": {
       "import": "./dist/vue-content.es.js",
@@ -12,7 +12,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "yarn check:types && vite build",
+    "check:types": "tsc",
     "ci": "yarn install --frozen-lockfile",
     "lint": "eslint --ignore-path .gitignore .",
     "lint:prod": "export NODE_ENV='production' && yarn lint"
